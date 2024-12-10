@@ -1,0 +1,141 @@
+:root {
+    --nav: #020617;
+    --main-text: #1e293b;
+    --white: #f8fafc;
+    --nav-accent: #f59e0b;
+    --accent: #d97706;
+    --lg-text: 3.625rem;
+    --md-text: 2.0625rem;
+    --sm-text: 0.85rem;
+}
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--white);
+    color: var(--main-text);
+}
+header {
+    background-color: var(--nav);
+    color: var(--white);
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+h1 {
+    font-size: var(--md-text);
+}
+h2 {
+    font-size: var(--lg-text);
+}
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover, a:focus {
+    color: var(--nav-accent);
+}
+ul {
+    display: flex;
+    gap: .65rem;
+    padding: 0;
+    margin: 0;
+}
+p {
+    margin-bottom: 1rem;
+}
+
+.lead {
+    color: var(--accent);
+    font-size: var(--md-text);
+}
+
+
+button {
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    font-size: var(--sm-text);
+    text-align: center;
+    transition: color .3s;
+}
+button:hover, button:focus {
+    color: var(--nav-accent);
+}
+button:hover svg {
+    color: red;
+}
+button svg {
+    width: 2rem;
+    display: block;
+    margin: auto;
+}
+button:focus {
+    border-radius: 4px;
+    outline: 2px solid var(--white);
+}
+
+form {
+    background-color: var(--main-text);
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 2rem 1rem;
+    top: 80px;
+}
+input {
+    border: none;
+    height: 2.5rem;
+    padding: .5rem;
+}
+
+[type="search"]{
+    border-radius: 4px 0 0 4px;
+    width: 100%;
+}
+[type="submit"] {
+    border-radius: 0 4px 4px 0;
+    background-color: var(--accent);
+    color: var(--white);
+    transition: background-color 0.3s;
+}
+[type="submit"]:hover { 
+    background-color: var(--nav-accent);
+}
+form div {
+    display: flex;
+}
+
+.collapsed {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.expanded {
+    max-height: unset;
+    opacity: 1;
+    visibility: visible;
+}

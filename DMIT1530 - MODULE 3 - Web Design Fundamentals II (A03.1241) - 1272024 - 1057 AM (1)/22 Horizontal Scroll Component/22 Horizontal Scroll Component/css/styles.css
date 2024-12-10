@@ -1,0 +1,80 @@
+body {
+    color: #222;
+    font-family: 'Roboto Flex', cursive;
+}
+.container {
+    max-width: 64rem;
+    margin:0 auto;
+    padding: 2rem 1rem;
+}
+body > section:first-of-type
+{
+    background-color: #333;
+    color: white;
+}
+h1, h2, h3 {
+    font-family: 'Roboto condensed', cursive;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+h2 {
+    font-size: 2rem;
+}
+.card-body p {
+    font-size: 1.5rem;
+}
+.card-body a {
+    background-color: #333;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 0;
+    width: 8.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.card-body a:hover {
+    background-color: maroon;
+    letter-spacing: 2px;
+}
+
+.scrollable {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    margin-bottom: 3rem;
+}
+.scrollable section {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px #eee;
+    /* width: 300px; */
+    flex: 0 0 300px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* this is for webkit browsers */
+.scrollable::-webkit-scrollbar {
+    background-color: #eee;
+    width: .5rem;
+}
+.scrollable::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background-color: #444;
+}
+
+/* firefox as of 2022 */
+.scrollable {
+    scrollbar-color: #444 #eee;
+    scrollbar-width: thin;
+}

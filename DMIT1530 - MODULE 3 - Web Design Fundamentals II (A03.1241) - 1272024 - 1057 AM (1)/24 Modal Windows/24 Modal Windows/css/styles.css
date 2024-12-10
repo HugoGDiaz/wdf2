@@ -1,0 +1,142 @@
+/* Variables */
+
+:root {
+    --emerald: #059669;
+    --white: #f9f9f9;
+    --neutral: #edeae7;
+    --heading: #252b42;
+    --text: #858585;
+}
+
+/* Utility Classes */
+
+.flex-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sr-only {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+}
+
+/* Universal Styles */
+
+body {
+    font-family: "Quicksand", sans-serif;
+    background-color: var(--emerald);
+    color: var(--heading);
+}
+section {
+    min-height: 100vh;
+}
+h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 300;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--text);
+    margin-bottom: 2rem;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    min-height: 100vh;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.modal {
+    background-color: var(--neutral);
+    border-radius: 30px;
+    max-width: 540px;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    position: fixed;
+    /* different way of perfectly centering a variable sized box */
+    left: 50vw;
+    top: 50vh;
+    transform: translate(calc(-50% - 1rem), calc(-50% - 1rem));
+    overflow: hidden;
+}
+
+.modal-bg {
+    background: url(../img/letter.webp) center / cover no-repeat;
+    height: 200px;
+}
+
+.modal-body {
+    padding: 4rem 2rem;
+}
+/* Close Button */
+.close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    gap: .5rem;
+    justify-content: space-between;
+    margin: 0 0 3rem auto;
+    transition: all .3s;
+}
+.close svg {
+    width: 1.5rem;
+}
+.close path {
+    stroke: var(--heading);
+    transition: all .3s;
+}
+
+.close:hover, .close:hover path {
+    color: var(--emerald);
+    stroke: var(--emerald);
+}
+
+input{
+    height: 3rem;
+    border: none;
+    padding: 0 1rem;
+}
+
+[type="email"] {
+    border-radius: 1rem 0 0 1rem;
+    flex: 1 0 calc(80% - 1rem);
+}
+[type="submit"] {
+    border-radius: 0 1rem 1rem 0;
+    background-color: var(--emerald);
+    color: white;
+    transition: all .3s;
+    flex: 0 1 20%;
+}
+
+[type="submit"]:hover {
+    background-color: violet
+}
+
+@media(min-width: 640px) {
+    .modal {
+        max-width: 960px;
+    }
+    .modal-body {
+        padding: 6rem 4rem;
+    }
+    .modal-bg {
+        width: 400px;
+        height: unset;
+    }
+
+    .wide-flex {
+        display: flex;
+    }
+}
